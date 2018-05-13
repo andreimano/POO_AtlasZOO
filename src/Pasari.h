@@ -1,0 +1,27 @@
+#pragma once
+#include <string>
+#include "Vertebrate.h"
+
+using namespace std;
+
+class Pasari : public Vertebrate {
+public:
+  Pasari();
+  virtual ~Pasari();
+  string getFamilie() const;
+  virtual string getSunet() const = 0;
+  virtual string getSpecie() const = 0;
+  virtual bool getZburatoare() const = 0;
+  virtual void afisare() const;
+private:
+  const string* const mFamilie;
+};
+
+class PasareZburatoare : public Pasari {
+public:
+  
+protected:
+  string* mSunet;
+  string* mSpecie;
+  bool mZburatoare;
+};

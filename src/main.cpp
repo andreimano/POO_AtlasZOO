@@ -18,4 +18,6 @@ la alegere care sa conțină și sa afiseze doar numarul de nevertebrate.
 int main() {
   PesteGeneric fishy("Stiuca");
   fishy.afisare();
+  PesteGeneric* fishy2 = new PesteGeneric(fishy);
+  fishy2->afisare();
 }

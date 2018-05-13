@@ -7,6 +7,12 @@ Pesti::Pesti()
     mSunet(new string("Wub Wub Wub..."))
 {}
 
+// Pesti::Pesti(const Pesti& o)
+//   : Vertebrate(o),
+//     mFamilie(new string(*(o.mFamilie))),
+//     mSunet(new string(*(o.mSunet)))
+//   {}
+
 Pesti::~Pesti() {
   delete mFamilie;
   delete mSunet;
@@ -34,6 +40,18 @@ PesteGeneric::PesteGeneric(string specie)
   : Pesti::Pesti(),
     mSpecie(new string(specie))
   {}
+
+PesteGeneric::PesteGeneric(const PesteGeneric& o)
+  : Pesti::Pesti(o),
+    mSpecie(new string(*(o.mSpecie)))
+  {}
+
+// PesteGeneric& PesteGeneric::operator=(const PesteGeneric&) {
+//   if(this != &o) {
+//     delete mSpecie;
+//   }
+//   return *this;
+// }
 
 PesteGeneric::~PesteGeneric() {
   delete mSpecie;

@@ -7,6 +7,7 @@ using namespace std;
 class Pesti : public Vertebrate {
 public:
   Pesti();
+  // Pesti& operator=(const Pesti&);
   virtual ~Pesti();
   string getFamilie() const;
   string getSunet() const;
@@ -21,6 +22,8 @@ class PesteGeneric : public Pesti {
 public:
   PesteGeneric();
   explicit PesteGeneric(string);
+  PesteGeneric(const PesteGeneric&);
+  // PesteGeneric& operator=(const PesteGeneric&);
   virtual ~PesteGeneric();
   string getSpecie() const;
   virtual void afisare() const;
