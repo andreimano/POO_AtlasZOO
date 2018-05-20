@@ -17,6 +17,7 @@ public:
   virtual string getSpecie() const;
   virtual string getLocomotie() const;
   virtual string getMediu() const;
+  static unsigned int getNrNevertebrate(); 
   virtual void afisare() const;
 protected:
   const string* const mGrup;

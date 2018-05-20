@@ -16,6 +16,10 @@ Nevertebrate::Nevertebrate()
   ++nrNevertebrate;
 }
 
+unsigned int Nevertebrate::getNrNevertebrate() {
+  return nrNevertebrate;
+}
+
 Nevertebrate::Nevertebrate(const Nevertebrate& o)
   : mGrup(new string("Nevertebrate")),
     mFamilie(new string(*(o.mFamilie))),
@@ -47,7 +51,14 @@ Nevertebrate& Nevertebrate::operator = (const Nevertebrate& o) {
 }
 
 istream& operator >> (istream& in, Nevertebrate& o) {
-  in >> *(o.mFamilie) >> *(o.mSpecie) >> *(o.mLocomotie) >> *(o.mMediu);
+  cout << "Familie: ";
+  in >> *(o.mFamilie);
+  cout << "Specie: ";
+  in >> *(o.mSpecie);
+  cout << "Locomotie: ";
+  in >> *(o.mLocomotie);
+  cout << "Mediu: ";
+  in >> *(o.mMediu);
   return in;
 }
 
