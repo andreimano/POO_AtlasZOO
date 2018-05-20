@@ -19,9 +19,18 @@ private:
 
 class PasareZburatoare : public Pasari {
 public:
-  
+  PasareZburatoare();
+  PasareZburatoare(string, string);
+  PasareZburatoare(const PasareZburatoare&);
+  PasareZburatoare& operator=(const PasareZburatoare&);
+  friend istream& operator >> (istream&, PasareZburatoare&);
+  virtual ~PasareZburatoare();
+  string getSunet() const;
+  string getSpecie() const;
+  bool getZburatoare() const;
+  virtual void afisare() const;
 protected:
   string* mSunet;
   string* mSpecie;
-  bool mZburatoare;
+  const bool mZburatoare;
 };

@@ -14,10 +14,13 @@ la alegere care sa conțină și sa afiseze doar numarul de nevertebrate.
 */
 
 #include "Pesti.h"
+#include "Pasari.h"
 
 int main() {
   PesteGeneric fishy("Stiuca");
   fishy.afisare();
   PesteGeneric* fishy2 = new PesteGeneric(fishy);
   fishy2->afisare();
+  PasareZburatoare cioara("cra cra", "cioara");
+  cioara.afisare();
 }
