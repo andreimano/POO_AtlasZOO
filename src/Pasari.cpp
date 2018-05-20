@@ -34,7 +34,8 @@ PasareZburatoare::PasareZburatoare(string sunet, string specie)
 {}
 
 PasareZburatoare::PasareZburatoare(const PasareZburatoare& o)
-  : mZburatoare(true)
+  : Pasari(),
+    mZburatoare(true)
 {
   mSunet = new string(o.getSunet());
   mSpecie = new string(o.getSpecie());

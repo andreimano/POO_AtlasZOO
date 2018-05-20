@@ -4,19 +4,22 @@
 using namespace std;
 
 Reptile::Reptile()
-  : mFamilie(new string("Reptile")),
+  : Vertebrate(),
+    mFamilie(new string("Reptile")),
     mSunet(new string("Squuish")),
     mSpecie(new string("Reptila Generica"))
 {}
 
 Reptile::Reptile(string sunet, string specie)
-  : mFamilie(new string("Reptile")),
+  : Vertebrate(),
+    mFamilie(new string("Reptile")),
     mSunet(new string(sunet)),
     mSpecie(new string(specie))
 {}
 
 Reptile::Reptile(const Reptile& o)
-  : mFamilie(new string("Reptile")),
+  : Vertebrate(),
+    mFamilie(new string("Reptile")),
     mSunet(new string(*(o.mSunet))),
     mSpecie(new string(*(o.mSpecie)))
 {}

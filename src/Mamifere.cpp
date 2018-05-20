@@ -27,6 +27,7 @@ Maimuta::Maimuta()
 {}
 
 Maimuta::Maimuta(const Maimuta& o)
+  : Mamifere()
 {
   mConstiinta = o.mConstiinta;
   mSunet = new string(o.getSunet());
@@ -97,7 +98,8 @@ Om::Om()
 {}
 
 Om::Om(string sunet, string specie, string locomotie)
-  : mConstiinta(true),
+  : Mamifere(),
+    mConstiinta(true),
     mSunet(new string(sunet)),
     mSpecie(new string(specie)),
     mLocomotie(new string(locomotie))
@@ -143,7 +145,9 @@ Barbat::Barbat(string sunet, string specie, string locomotie)
     mSex('M')
 {}
 
-Barbat::Barbat(const Barbat& o) {
+Barbat::Barbat(const Barbat& o)
+  : Om()
+{
   mConstiinta   = o.mConstiinta;
   *mSunet       = *(o.mSunet);
   *mSpecie      = *(o.mSpecie);
@@ -186,7 +190,9 @@ Femeie::Femeie(string sunet, string specie, string locomotie)
     mSex('F')
 {}
 
-Femeie::Femeie(const Femeie& o) {
+Femeie::Femeie(const Femeie& o)
+: Om()
+{
   mConstiinta   = o.mConstiinta;
   *mSunet       = *(o.mSunet);
   *mSpecie      = *(o.mSpecie);
