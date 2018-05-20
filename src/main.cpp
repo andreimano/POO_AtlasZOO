@@ -12,9 +12,11 @@ animal în lista, indiferent de tipul acestuia.
 - Sa se construiasca o specializare a acestei clase pentru un tip de data
 la alegere care sa conțină și sa afiseze doar numarul de nevertebrate.
 */
-
+#include <iostream>
 #include "Pesti.h"
 #include "Pasari.h"
+#include "Mamifere.h"
+#include "Reptile.h"
 
 int main() {
   PesteGeneric fishy("Stiuca");
@@ -23,4 +25,14 @@ int main() {
   fishy2->afisare();
   PasareZburatoare cioara("cra cra", "cioara");
   cioara.afisare();
+  Barbat barbat;
+  Femeie femeie;
+  Reptile reptila;
+  cout << endl;
+  barbat.afisare();
+  cout << endl;
+  femeie.afisare();
+  cout << endl;
+  reptila.afisare();
+  cout << endl;
 }

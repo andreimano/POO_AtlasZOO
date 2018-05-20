@@ -54,7 +54,7 @@ string Reptile::getSpecie() const {
 
 void Reptile::afisare() const {
   Vertebrate::afisare();
-  cout << "Familie: " << *mFamilie
-       << "Sunet: "   << *mSunet
-       << "Specie: "  << *mSpecie;
+  cout << "Familie: " << *mFamilie << endl
+       << "Sunet: "   << *mSunet   << endl
+       << "Specie: "  << *mSpecie  << endl;
 }

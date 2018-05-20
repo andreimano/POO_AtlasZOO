@@ -14,5 +14,5 @@ std::string Vertebrate::getGrup() const {
 }
 
 void Vertebrate::afisare() const {
-  cout << getGrup() << endl;
+  cout << "Grup: " << getGrup() << endl;
 }

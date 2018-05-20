@@ -16,7 +16,7 @@ string Pasari::getFamilie() const {
 
 void Pasari::afisare() const {
   Vertebrate::afisare();
-  cout << getFamilie() << endl;
+  cout << "Familie: " << getFamilie() << endl;
 }
 
 PasareZburatoare::PasareZburatoare()
@@ -78,5 +78,8 @@ bool PasareZburatoare::getZburatoare() const {
 
 void PasareZburatoare::afisare() const {
   Pasari::afisare();
-  cout << endl << *mSunet << endl << *mSpecie << endl << "Zburatoare: " << mZburatoare;
+  cout << endl
+       << "Sunet: "      << *mSunet     << endl
+       << "Specie: "     << *mSpecie    << endl
+       << "Zburatoare: " << mZburatoare << endl;
 }

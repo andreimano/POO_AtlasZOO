@@ -15,7 +15,7 @@ string Mamifere::getFamilie() const {
 }
 
 void Mamifere::afisare() const {
-  cout << "Familie :" << *mFamilie << endl;
+  cout << "Familie: " << *mFamilie << endl;
 }
 
 Maimuta::Maimuta()
@@ -82,10 +82,10 @@ bool Maimuta::hasConstiinta() const {
 
 void Maimuta::afisare() const {
   Mamifere::afisare();
-  cout << "Constiinta " << mConstiinta  << endl
-       << "Sunet: "     << *mSunet      << endl
-       << "Specie: "    << *mSpecie     << endl
-       << "Locomotie: " << *mLocomotie  << endl;
+  cout << "Constiinta: " << mConstiinta  << endl
+       << "Sunet: "      << *mSunet      << endl
+       << "Specie: "     << *mSpecie     << endl
+       << "Locomotie: "  << *mLocomotie  << endl;
 }
 
 Om::Om()
@@ -127,10 +127,10 @@ bool Om::hasConstiinta() const {
 
 void Om::afisare() const {
   Mamifere::afisare();
-  cout << "Constiinta " << mConstiinta  << endl
-       << "Sunet: "     << *mSunet      << endl
-       << "Specie: "    << *mSpecie     << endl
-       << "Locomotie: " << *mLocomotie  << endl;
+  cout << "Constiinta: " << mConstiinta  << endl
+       << "Sunet: "      << *mSunet      << endl
+       << "Specie: "     << *mSpecie     << endl
+       << "Locomotie: "  << *mLocomotie  << endl;
 }
 
 Barbat::Barbat()
@@ -169,7 +169,7 @@ istream& operator >> (istream& in, Barbat& o) {
 
 void Barbat::afisare() const {
   Om::afisare();
-  cout << "Sex" << mSex << endl;
+  cout << "Sex: " << mSex << endl;
 }
 
 char Barbat::getSex() const {
@@ -212,7 +212,7 @@ istream& operator >> (istream& in, Femeie& o) {
 
 void Femeie::afisare() const {
   Om::afisare();
-  cout << "Sex" << mSex << endl;
+  cout << "Sex: " << mSex << endl;
 }
 
 char Femeie::getSex() const {
