@@ -33,7 +33,7 @@ int main() {
     cout << "1. Un barbat.\n";
     cout << "2. O femeie.\n";
     cout << "3. O maimuta.\n";
-    cout << "4. O maimuta care a evoluat intr-un om.\n";
+    cout << "4. O femeie care devine barbat.\n";
     cout << "5. O stiuca.\n";
     cout << "6. O nevertebrata.\n";
     cin >> alegere;
@@ -50,7 +50,7 @@ int main() {
           atlas += (new Maimuta);
           break;
         case 4:
-          atlas += ( dynamic_cast<Barbat*>(new Maimuta) );
+          atlas += ( dynamic_cast<Barbat*>(new Femeie) );
           break;
         case 5:
           atlas += (new PesteGeneric("Stiuca"));
@@ -67,5 +67,15 @@ int main() {
   }
   atlas.afisare();
 
-  cout << "\n Numar de nevertebrate din atlas: " << Nevertebrate::getNrNevertebrate() << endl;
+  AtlasZoologic<Nevertebrate> atlasNevertebrate;
+  cout << "\n********Atlas Nevertebrate********\nCate pagini doresti?";
+  cin >> n;
+  cout << "Introdu datele: \n";
+  while(n--) {
+    cout << endl;
+    Nevertebrate* aux = new Nevertebrate;
+    cin >> *aux;
+    atlasNevertebrate += *aux;
+  }
+  atlasNevertebrate.afisare();
 }
